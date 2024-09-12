@@ -1,0 +1,28 @@
+import React, { useState ,useEffect } from 'react'
+//contact view
+   const Contactview =() => { 
+   const [contact , setContact] = useState([]);
+
+   useEffect(()=>{
+//Fetch JSON data for set contact state
+    const fetchdata = async () => {
+try{
+   const response = await fetch ('sample.json');
+   const data = await response.json();
+   setContacts{data.contact}
+}  catch(error){
+   console.error('Error fecthing Contacts',error);
+}
+};
+   fetchData();
+},[]);
+
+ const handelDeleteContact = (contactId) => {}
+//Remove Contacts from local state
+  setContacts((prevContacts) =>
+  preContacts.filter((contact) => contact.Id !== contactId)
+  );
+  };
+    return( 
+    );
+    };
